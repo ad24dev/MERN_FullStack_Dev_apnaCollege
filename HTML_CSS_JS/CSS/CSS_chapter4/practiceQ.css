@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#face {
+  width: 400px;
+  height: 400px;
+  background-color: #ffa511;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 200px;
+  height: 75px;
+  background-color: brown;
+  border-radius: 0 0 50px 50px;
+  position: absolute;
+  top: 250px;
+  left: 43%;
+}
+
+#left-eye,
+#right-eye {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 100px;
+  position: absolute;
+  top: 100px;
+  left: 43%;
+}
+
+#right-eye {
+  left: 53%;
+}

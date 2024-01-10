@@ -1,0 +1,25 @@
+.box {
+  width: 300px;
+  height: 200px;
+  background-color: aqua;
+  /* animation-name: fontAnimation;
+   animation-duration: 2s;
+  animation-delay: 0;
+  animation-iteration-count: infinite; 
+   animation-timing-function: ease-in;
+  animation-direction: alternate-reverse; 
+  animation-fill-mode: both;  */
+
+  animation: fontAnimation 2s ease-in 0s 3 alternate backwards;
+}
+
+@keyframes fontAnimation {
+  from {
+    font-size: 10px;
+    width: 10px;
+  }
+  to {
+    font-size: 50px;
+    width: 400px;
+  }
+}
