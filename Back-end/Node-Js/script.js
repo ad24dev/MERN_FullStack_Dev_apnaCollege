@@ -10,8 +10,14 @@
 //   console.log("Hello to", args[i]);
 // }
 
-// ***** Exports in files ******
+// // ***** Exports in files ******
 
-const someValue = require("./math");
+// const someValue = require("./math");
 
-console.log(someValue.sum(4, 2));
+// console.log(someValue.sum(4, 2));
+
+// ****** Exports directories
+
+const info = require("./Furits");
+
+console.log(info[0].name);
