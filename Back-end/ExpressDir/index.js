@@ -1,16 +1,27 @@
 const express = require("express");
 const app = express();
 
-console.dir(app);
-
-let port = 3000;
+let port = 8080;
 
 app.listen(port, () => {
   console.log(`app is listening on port ${port}`);
 });
 
-app.use((req, res) => {
-  console.log("request Rececived");
-  let code = "<h1>Furits <ul><li>Apple</li><li>Orange</li></ul></h1>";
-  res.send(code);
+app.get("/:username/:id", (req, res) => {
+  let { username, id } = req.params;
+  let htmlstr = `<h1>welcome to the page ${username}</h1>`;
+  res.send(htmlstr);
 });
+
+app.get("/search", (req, res) => {
+  let { q } = req.query;
+  if (!q) {
+    res.send("<h1>nothing searched</h1>");
+  }
+  res.send(`<h1>search result for: ${q} </h1>`);
+});
+
+// app.use((req, res) => {
+//   console.log("request Recevied");
+//   res.send("<h1>Furit</h1> <ul><li>apple</li><li>orange</li></ul>");
+// });
